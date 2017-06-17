@@ -299,7 +299,7 @@ RES_CSS = \
   
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-FLAX_RC = res/flaxscript-qt-res.rc
+CHAINCOIN_RC = res/flaxscript-qt-res.rc
 
 libflaxscriptqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
@@ -324,7 +324,7 @@ if TARGET_DARWIN
   flaxscript_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  flaxscript_qt_SOURCES += $(FLAX_RC)
+  flaxscript_qt_SOURCES += $(CHAINCOIN_RC)
 endif
 flaxscript_qt_LDADD = libflaxscriptqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET

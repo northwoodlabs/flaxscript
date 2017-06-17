@@ -61,24 +61,17 @@ public:
         assert(hashGenesisBlock == uint256("0x00000cfc6d06805a3cf598e42c91379bf185fce04cc2759ef53a203aeae676a1"));
         assert(genesis.hashMerkleRoot == uint256("0xe6fbf62ba0bf84cd80fbf65f9a32446143dfc457d83bca1a9e530570ad15e5c8"));
 
-        vSeeds.push_back(CDNSSeedData("seed1.23skidoo.info", "seed1.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed2.23skidoo.info", "seed2.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed3.23skidoo.info", "seed3.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed4.23skidoo.info", "seed4.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed5.23skidoo.info", "seed5.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed6.23skidoo.info", "seed6.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed7.23skidoo.info", "seed7.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed8.23skidoo.info", "seed8.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed9.23skidoo.info", "seed9.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed10.23skidoo.info", "seed10.23skidoo.info"));
-        vSeeds.push_back(CDNSSeedData("seed1.flaxscript.info", "seed1.flaxscript.info"));
+        vSeeds.push_back(CDNSSeedData("192.99.37.133", "192.99.37.133"));
+        vSeeds.push_back(CDNSSeedData("84.200.4.67", "84.200.4.67"));
+        vSeeds.push_back(CDNSSeedData("213.32.98.226", "213.32.98.226"));
+        //vSeeds.push_back(CDNSSeedData("", ""));
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of( 43);                    // Flaxscript addresses start with 'X'
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(  4);                    // Flaxscript script addresses start with '7'
-        base58Prefixes[SECRET_KEY] =     list_of(28 + 128);               // Flaxscript private keys start with '7' or 'X'
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0xFE)(0x52)(0xF8); // Flaxscript BIP32 pubkeys start with 'drkv'
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x02)(0xFE)(0x52)(0xCC); // Flaxscript BIP32 prvkeys start with 'drkp'
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000005);             // Flaxscript BIP44 coin type is '5'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of( 43);                    
+        base58Prefixes[SCRIPT_ADDRESS] = list_of(  4);                    
+        base58Prefixes[SECRET_KEY] =     list_of(28 + 128);               
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0xFE)(0x52)(0xF8); 
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x02)(0xFE)(0x52)(0xCC); 
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000005);             
 
         // Convert the pnSeeds array into usable address objects.
         for (unsigned int i = 0; i < ARRAYLEN(pnSeed); i++)
@@ -136,9 +129,8 @@ public:
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x00000a8f0d18d66188cbd8ad958b749a6d289e1b17363e98fea0ba4b87330435"));
 
-        vSeeds.push_back(CDNSSeedData("23skidoo.info", "23skidoo.info"));
-        //vFixedSeeds.clear();
-        //vSeeds.clear();
+        vFixedSeeds.clear();
+        vSeeds.clear();
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of( 105);                    // Testnet flaxscript addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = list_of( 44);                    // Testnet flaxscript script addresses start with '8' or '9'
@@ -171,7 +163,7 @@ public:
         strDataDir = "regtest";
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x302a153d30db8a969b92126f1c6d946a019b228ddc6888084c994f812d115685"));
+         assert(hashGenesisBlock == uint256("0x302a153d30db8a969b92126f1c6d946a019b228ddc6888084c994f812d115685"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }

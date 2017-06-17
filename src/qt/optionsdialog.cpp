@@ -71,9 +71,8 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     /* Display elements init */
     
     /* Theme selector */
-    ui->theme->addItem(QString("FLAX-Classic"), QVariant("trad"));
-    ui->theme->addItem(QString("FLAX-Neu"), QVariant("drkblue"));
-    
+    ui->theme->addItem(QString("CHAINCOIN-green"), QVariant("drkblue"));
+    ui->theme->addItem(QString("CHAINCOIN-traditional"), QVariant("trad"));
 
     
     /* Language selector */

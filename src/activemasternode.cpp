@@ -6,7 +6,7 @@
 #include <boost/lexical_cast.hpp>
 
 //
-// Bootup the Masternode, look for a 23000 tons of FLAX input and register on the network
+// Bootup the Masternode, look for a 1000DRK input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
@@ -41,7 +41,8 @@ void CActiveMasternode::ManageStatus()
         }
 
         LogPrintf("CActiveMasternode::ManageStatus() - Checking inbound connection to '%s'\n", service.ToString().c_str());
-/*
+
+        /*
         if(Params().NetworkID() == CChainParams::MAIN){
             if(service.GetPort() != 9999) {
                 notCapableReason = "Invalid port: " + boost::lexical_cast<string>(service.GetPort()) + " - only 9999 is supported on mainnet.";
@@ -55,7 +56,8 @@ void CActiveMasternode::ManageStatus()
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason.c_str());
             return;
         }
-*/
+        */
+
         if(!ConnectNode((CAddress)service, service.ToString().c_str())){
             notCapableReason = "Could not connect to " + service.ToString();
             status = MASTERNODE_NOT_CAPABLE;

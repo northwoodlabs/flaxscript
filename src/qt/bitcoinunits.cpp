@@ -16,9 +16,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(FLAX);
-    unitlist.append(mFLAX);
-    unitlist.append(uFLAX);
+    unitlist.append(CHAINCOIN);
+    unitlist.append(mCHAINCOIN);
+    unitlist.append(uCHAINCOIN);
     unitlist.append(chuffs);
     return unitlist;
 }
@@ -27,9 +27,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case FLAX:
-    case mFLAX:
-    case uFLAX:
+    case CHAINCOIN:
+    case mCHAINCOIN:
+    case uCHAINCOIN:
     case chuffs:
         return true;
     default:
@@ -43,10 +43,10 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case FLAX: return QString("FLAX");
-            case mFLAX: return QString("mFLAX");
-            case uFLAX: return QString::fromUtf8("μFLAX");
-            case chuffs: return QString::fromUtf8("seeds");
+            case CHAINCOIN: return QString("FLAX");
+            case mCHAINCOIN: return QString("mFLAX");
+            case uCHAINCOIN: return QString::fromUtf8("μFLAX");
+            case chuffs: return QString::fromUtf8("chuffs");
             default: return QString("???");
         }
     }
@@ -54,10 +54,10 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case FLAX: return QString("tFLAX");
-            case mFLAX: return QString("mtFLAX");
-            case uFLAX: return QString::fromUtf8("μtFLAX");
-            case chuffs: return QString::fromUtf8("tseeds");
+            case CHAINCOIN: return QString("tFLAX");
+            case mCHAINCOIN: return QString("mtFLAX");
+            case uCHAINCOIN: return QString::fromUtf8("μtFLAX");
+            case chuffs: return QString::fromUtf8("tchuffs");
             default: return QString("???");
         }
     }
@@ -69,10 +69,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case FLAX: return QString("Flaxscript");
-            case mFLAX: return QString("milliFlaxscript (1 / 1,000)");
-            case uFLAX: return QString("microFlaxscript (1 / 1,000,000)");
-            case chuffs: return QString("nanoFlaxscript (1 / 100,000,000)");
+            case CHAINCOIN: return QString("Flaxscript");
+            case mCHAINCOIN: return QString("Milli-Flaxscript (1 / 1,000)");
+            case uCHAINCOIN: return QString("Micro-Flaxscript (1 / 1,000,000)");
+            case chuffs: return QString("Ten Nano-Flaxscript (1 / 100,000,000)");
             default: return QString("???");
         }
     }
@@ -80,10 +80,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case FLAX: return QString("testFlaxscript");
-            case mFLAX: return QString("millitestFlaxscript (1 / 1,000)");
-            case uFLAX: return QString("microtestFlaxscript (1 / 1,000,000)");
-            case chuffs: return QString("Seeds (1 / 100,000,000)");
+            case CHAINCOIN: return QString("TestFlaxscripts");
+            case mCHAINCOIN: return QString("Milli-TestFlaxscript (1 / 1,000)");
+            case uCHAINCOIN: return QString("Micro-TestFlaxscript (1 / 1,000,000)");
+            case chuffs: return QString("Ten Nano-TestFlaxscript (1 / 100,000,000)");
             default: return QString("???");
         }
     }
@@ -93,9 +93,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case FLAX:  return 100000000;
-    case mFLAX: return 100000;
-    case uFLAX: return 100;
+    case CHAINCOIN:  return 100000000;
+    case mCHAINCOIN: return 100000;
+    case uCHAINCOIN: return 100;
     case chuffs: return 1;
     default:   return 100000000;
     }
@@ -105,9 +105,9 @@ qint64 BitcoinUnits::maxAmount(int unit)
 {
     switch(unit)
     {
-    case FLAX:  return Q_INT64_C(21000000);
-    case mFLAX: return Q_INT64_C(21000000000);
-    case uFLAX: return Q_INT64_C(21000000000000);
+    case CHAINCOIN:  return Q_INT64_C(21000000);
+    case mCHAINCOIN: return Q_INT64_C(21000000000);
+    case uCHAINCOIN: return Q_INT64_C(21000000000000);
     case chuffs: return Q_INT64_C(2100000000000000);
     default:   return 0;
     }
@@ -117,9 +117,9 @@ int BitcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case FLAX: return 8; // 21,000,000 (# digits, without commas)
-    case mFLAX: return 11; // 21,000,000,000
-    case uFLAX: return 14; // 21,000,000,000,000
+    case CHAINCOIN: return 8; // 21,000,000 (# digits, without commas)
+    case mCHAINCOIN: return 11; // 21,000,000,000
+    case uCHAINCOIN: return 14; // 21,000,000,000,000
     case chuffs: return 16; // 2,100,000,000,000,000
     default: return 0;
     }
@@ -129,9 +129,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case FLAX: return 8;
-    case mFLAX: return 5;
-    case uFLAX: return 2;
+    case CHAINCOIN: return 8;
+    case mCHAINCOIN: return 5;
+    case uCHAINCOIN: return 2;
     case chuffs: return 0;
     default: return 0;
     }

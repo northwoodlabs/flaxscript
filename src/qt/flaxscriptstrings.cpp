@@ -137,7 +137,7 @@ QT_TRANSLATE_NOOP("flaxscript-core", ""
 "Unable to locate enough Darksend denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("flaxscript-core", ""
 "Unable to locate enough Darksend non-denominated funds for this transaction "
-"that are not equal 1000 FLAX."),
+"that are not equal 1000 CHAINCOIN."),
 QT_TRANSLATE_NOOP("flaxscript-core", ""
 "Unable to locate enough Darksend non-denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("flaxscript-core", ""

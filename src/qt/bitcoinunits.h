@@ -26,9 +26,9 @@ public:
      */
     enum Unit
     {
-        FLAX,
-        mFLAX,
-        uFLAX,
+        CHAINCOIN,
+        mCHAINCOIN,
+        uCHAINCOIN,
         chuffs
     };
 
