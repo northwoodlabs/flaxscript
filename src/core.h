@@ -13,7 +13,8 @@
 #include <stdint.h>
 
 #define START_MASTERNODE_PAYMENTS_TESTNET 1437369800 
-#define START_MASTERNODE_PAYMENTS 1509902800 //august 18th
+#define START_MASTERNODE_PAYMENTS 1509902800 
+
 static const int64_t DARKSEND_COLLATERAL = (0.01*COIN);
 static const int64_t DARKSEND_POOL_MAX = (999.99*COIN);
 
@@ -35,7 +36,7 @@ static const int64_t DARKSEND_POOL_MAX = (999.99*COIN);
 #define MASTERNODE_SYNC_IN_PROCESS             8
 #define MASTERNODE_REMOTELY_ENABLED            9
 
-#define MASTERNODE_MIN_CONFIRMATIONS           23
+#define MASTERNODE_MIN_CONFIRMATIONS           15
 #define MASTERNODE_MIN_DSEEP_SECONDS           (30*60)
 #define MASTERNODE_MIN_DSEE_SECONDS            (5*60)
 #define MASTERNODE_PING_SECONDS                (1*60)
@@ -47,7 +48,7 @@ static const int MIN_POOL_PEER_PROTO_VERSION = 90001; // minimum peer version ac
 class CTransaction;
 
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = 5000000 * COIN;
+static const int64_t MAX_MONEY = 10000000 * COIN;
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
 /** An outpoint - a combination of a transaction hash and an index n into its vout */

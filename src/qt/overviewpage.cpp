@@ -30,7 +30,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate(): QAbstractItemDelegate(), unit(BitcoinUnits::FLAX)
+    TxViewDelegate(): QAbstractItemDelegate(), unit(BitcoinUnits::CHAINCOIN)
     {
 
     }
@@ -147,9 +147,9 @@ OverviewPage::OverviewPage(QWidget *parent) :
         ui->darksendReset->setText("(" + tr("Disabled") + ")");
         ui->frameDarksend->setEnabled(false);
     }else if(!fEnableDarksend){
-        ui->toggleDarksend->setText(tr("Start Darksend Mixing"));
+        ui->toggleDarksend->setText(tr("Engage Flaxwiring"));
     } else {
-        ui->toggleDarksend->setText(tr("Stop Darksend Mixing"));
+        ui->toggleDarksend->setText(tr("Cease Flaxwiring"));
     }
 
     // start with displaying the "out of sync" warnings
@@ -232,7 +232,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
         connect(ui->toggleDarksend, SIGNAL(clicked()), this, SLOT(toggleDarksend()));
     }
 
-    // update the display unit, to not use the default ("FLAX")
+    // update the display unit, to not use the default ("CHAINCOIN")
     updateDisplayUnit();
 }
 
@@ -354,7 +354,7 @@ void OverviewPage::darkSendStatus()
 
             ui->darksendEnabled->setText(tr("Disabled"));
             ui->darksendStatus->setText("");
-            ui->toggleDarksend->setText(tr("Start Darksend Mixing"));
+            ui->toggleDarksend->setText(tr("Engage Flaxwiring"));
         }
 
         return;
@@ -497,9 +497,9 @@ void OverviewPage::toggleDarksend(){
     fEnableDarksend = !fEnableDarksend;
 
     if(!fEnableDarksend){
-        ui->toggleDarksend->setText(tr("Start Darksend Mixing"));
+        ui->toggleDarksend->setText(tr("Enable Flaxwiring));
     } else {
-        ui->toggleDarksend->setText(tr("Stop Darksend Mixing"));
+        ui->toggleDarksend->setText(tr("Cease Flaxwiring"));
 
         /* show darksend configuration if client has defaults set */
 

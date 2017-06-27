@@ -10,9 +10,9 @@ AC_INIT([Flaxscript Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_V
 AC_CONFIG_AUX_DIR([src/build-aux])
 AC_CONFIG_MACRO_DIR([src/m4])
 AC_CANONICAL_HOST
-AH_TOP([#ifndef FLAX_CONFIG_H])
-AH_TOP([#define FLAX_CONFIG_H])
-AH_BOTTOM([#endif //FLAX_CONFIG_H])
+AH_TOP([#ifndef CHAINCOIN_CONFIG_H])
+AH_TOP([#define CHAINCOIN_CONFIG_H])
+AH_BOTTOM([#endif //CHAINCOIN_CONFIG_H])
 
 # This m4 will only be used if a system copy cannot be found. This is helpful
 # on systems where autotools are installed but the pkg-config macros are not in

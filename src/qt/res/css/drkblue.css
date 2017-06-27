@@ -939,7 +939,7 @@ QWidget .QFrame#frameDarksend .QPushButton#runAutoDenom { /* No idea why this bu
 qproperty-geometry: rect(0 0 0 0);
 }
 
-QWidget .QFrame#frameDarksend .QPushButton#toggleDarksend { /* Start Darksend Mixing */
+QWidget .QFrame#frameDarksend .QPushButton#toggleDarksend { /* Engage Flaxwiring */
 qproperty-geometry: rect(115 268 295 40);
 font-size:17px;
 font-weight:bold;
