@@ -13,7 +13,7 @@
 const std::string CLIENT_NAME("Flaxscript");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "-HarryCoin"
+#define CLIENT_VERSION_SUFFIX   "-LinumUsitatissimum"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.

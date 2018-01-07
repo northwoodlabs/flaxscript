@@ -10,9 +10,9 @@
 
 // These need to be macros, as version.cpp's and flaxscript-qt.rc's voodoo requires it
 #define CLIENT_VERSION_MAJOR       1
-#define CLIENT_VERSION_MINOR       1
-#define CLIENT_VERSION_REVISION    2
-#define CLIENT_VERSION_BUILD       0
+#define CLIENT_VERSION_MINOR       2
+#define CLIENT_VERSION_REVISION    99
+#define CLIENT_VERSION_BUILD       99
 
 
 
@@ -21,7 +21,7 @@
 
 // Copyright year (2009-this)
 // Todo: update this when changing our copyright comments in the source
-#define COPYRIGHT_YEAR 2016
+#define COPYRIGHT_YEAR 2017
 
 #endif //HAVE_CONFIG_H
 
